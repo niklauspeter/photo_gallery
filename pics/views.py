@@ -48,3 +48,7 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'all-pics/search.html',{"message":message})
+
+def gallery_pics(request):
+    pics = Image.all_pics()
+    return render(request, 'all-pics/gallery.html', {"pics":pics})

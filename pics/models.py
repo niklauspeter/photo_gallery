@@ -63,6 +63,11 @@ class Image (models.Model):
         ordering = ['image_name']   
 
     @classmethod
+    def all_pics(cls):
+        pics = cls.objects.all()
+        return pics
+
+    @classmethod
     def todays_pics(cls):
         today = dt.date.today()
         pics = cls.objects.filter(pub_date__date = today)
