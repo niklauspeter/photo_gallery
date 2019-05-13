@@ -1,4 +1,5 @@
 from django.db import models
+import datetime as dt
 
 # Create your models here.
 class tags(models.Model):
@@ -33,7 +34,7 @@ class Image (models.Model):
     image_location = models.ForeignKey(Areas)
     image_category = models.ForeignKey(Category)
     pub_date = models.DateTimeField(auto_now_add=True)
-    post_image = models.ImageField(upload_to = 'my-photos/', null=True)
+    post_image = models.ImageField(upload_to = 'my-pics/', null=True)
     tags = models.ManyToManyField(tags)
 
     def __str__(self):
