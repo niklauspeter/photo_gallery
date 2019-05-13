@@ -4,13 +4,14 @@
 
 <div class="container">
 
-  <!-- Looping through news   -->
+  <!-- Looping through pics   -->
   {% for pics_item in pics %}
 
   <div class="row">
     <!-- displaying News articles -->
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <h2 class="text-center"> {{ pics_item.title }} </h2>
+        <h1>{{pics_item.image_name}}</h1>
+        <img src="{{pics_item.post_image.url}}" class="img-responsive" alt="Image" style="width: 500px; height: 250px;">
     </div>
 
   </div>
