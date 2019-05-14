@@ -13,18 +13,24 @@
 
   {% block styles %}
     {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'css/basenews.css' %}">
+    <link rel="stylesheet" href="{% static 'css/basepics.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Akronim|Stylish" rel="stylesheet">
   {% endblock %}
 
 </head>
 <body>
     {% include "navbar.html" %}
 
-    {% block content %} {%endblock%}
+    {% block content %}
+    
+     {%endblock%}
+
 
     {% block scripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
      {% bootstrap_javascript %}
+     <link rel="stylesheet" href="{% static 'js/app.js' %}">
     {% endblock %}
 </body>
 </html>
