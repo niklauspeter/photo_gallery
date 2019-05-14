@@ -1,25 +1,67 @@
 {%extends 'all-pics/base.html'%}
 {% block content %} 
 {{ block.super}}
-
-<div class="container">
+<div style="background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhIQEhAQFQ8PEBUQDxAPEA8PFREWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0NFQ8PFSsZFRkrKy03KysrLS0rLS03NzctNzcrKysrLTctLSsrNystKy0tNzcrKy0rKysrKysrKysrK//AABEIALcBEwMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAACAwABBAUGBwj/xAA4EAACAQIDBQUFBwUBAQAAAAAAAQIDEQQhMQUSQVFhE3GBkaEUUrHB8BUiMkJi0eEGcoKS8bJT/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EABkRAQEBAQEBAAAAAAAAAAAAAAARARIhAv/aAAwDAQACEQMRAD8A+IFB2KsUUUFYogpFohEUQhZdgKsRIKxAirEsWXYAbEsHYqwFECSLSAGxLBlWAGxLBWJYCkVYKxLAVYJIhdgIEoksWiiboVi0i4oJUUQkgkg4xKgFAJQHxgMVMBCRaiOdMuMAtL3CjT2ZCpXn5IGwywLRhoJVg90m4AFibozdKaACwSRLB2ABoiQdi0gBSLsFYJIsAWJYZYpxACxdi7F2AAlg90m6AFiWDaKsANiy7EsBEi1EtINIJuqUQlAOIyMSoUohKI5UwuzCwqMR0IhRpj4UipUhAPdHUoDezLEZdwKNI09mXGmIhSpENipELB4zdJuhksc3QuwSiFYtIFVYW4mhIpxCVnUQ90JoiChSLsMUAlTKlJsEkM3SbpEoVEm6HYuxQlxJYbKJSiAFirDlEjgAlItxG7pW6ArdLcRm6GogIUQ4xGbgyNMELhA0U4EjTH09QIqQapGiMbj6VC5qIxKmOhTNzwvQOjSzsWJQUMOOeHOjSoK1wJRLGa57oFxpmqazDp0RFpKpEOlDD5ELEr5ogd0tII4ugUWSxbQEIRIPdKFziSMBiiOhAKqlEbukhANFKTOAtwNTQDIjPulJD90vsgpFibo7cLUAFQiE4jlSCcAlZnEigauzK3CrWfcL3BzgRRIUpRGwiWojKcMypRwgNp4fMbQw7Z0KOFLmM7pVGiacNSu7DexsupoowNRN02jg1qLr4WzvY6NCw6pTTRqMsuGw/wB27dhFeCWi8WaY1ElYXPMoz06VzbRog0ka6KEDI4fIgzdZQR8bIGolpHB2LDsTcLSBFJBIEbTiFxFEdBFIOKBpkYkUS0GoFZDYiQxUw1TECdwKMDQqY+FEsGB0SSp2Oh2IEqaERjjTb4BOibErAziIM24A4GjdK3RBmcC1TNCpj6NC7EGOOHbNdLCPkdSjgkjXGkmazErFRoWNVKkP7IdTiaiUlUBzw5phELduWIRTg2HiG0rczbQpXysMeDvqBxHTYW4a6sLaoVYCUoHRw8BFOJuoaaDQzsiB7xCD4q4CpMdKRmkcXYe8QWg0wUUUOhEQsjRFgHGFx0YC6dSw+E7lZXGA6ECqY6LLmIkYjIxRW6FbIoNQDQumh0IXAKECnhrsdCm08zXRVypWB4Vi5YJnpqeGy08+Iuph+mZqJXlJ0nF2GUaV3p0OzV2fvZtGeGGcNeOhmLWR0WbMPh1HM008M3a9h3s/AsSlQH7liRo7o2yZrEI3jTSQmVMJTsBrjE0UqRko1TrYSSWbGjVgsLx4jsXhbGnCyi80aMRG6vqYrUeWxWHd2znyWZ6HFxRyMRQvmuBrNZ0mnF3O5hluweV8jlUMO1mzrYKF9RpjJ2qIMrYRKTKA+JwlzCaEUrs0Qy1OLsW0RDGgJZAWMjKwtB00A7JjaSYuCzNESsmxdhm8Iirj4xRUFCTNFNNmeDRrhpkUaqNFcc+fQ6WDw8VoYcHK+R06L5GsZ0ythUxuGw0E1dWaDoT3sreI7sWs/A0jVGMeCLdO4unIbZkGetAxVKSevwOnOBjnqVB0sNkiShYfRTsJqPMKw4hGOVSxuxRzKkSaY2xmrXLUb5mShm7HWw1JWKBw8Tq4fM5UlZ2RuoVd1pcwOlGm08srm2g5WeYmlUTiXOfBMw0z4pp5GRZM0Ti9dTPUT4FZPioy6M2YSi1ZW1OJvO53aGM3Yt8bWXfYauF18LLef7kOe8RJ5tu7IIPieHjZ95oqRuBuWYxSucnUqSAkOnAU0AA2nIRbMfBAPpsdFmZI0QjYqHKasD2hSiUkEaKLOlRicymjo4Y1ia6eHpo2UonOpVkaYVuRrGXUw9SzOjOopRyOFRnmbcPLmaQ1LM1Qrc9AYRQutHOyCNjqRYipDlxM+9YNVQoaldxAhV3ugqu97wBw0XfmENxNLI5NRJNnXxdS0bs4k6l5Z8SauN+EgmdahJJHMoRW7kSc2ijquEZByopJczlUpStfM3UZSdk7gOp1msjTDELK4FPCN52NkdmN6rQyoo4uKTb8kg8LWhLO2fyAr7O+7ZJ3YOzcJNPP4EVVfB5txXPwMFS97Hp3GxleC35XUfkKbjmUtnNpO5Z6CODsiDoj82OQcHmAqfUbGj1+BzdDZSustTKaI0XzC9k/UEZVFjoxNUMI/eQSwfOS80WFZ0Vvs3xwkX+b1GR2fF8WWJWKnMajZDZafvD47I6TESsNE2Rq2NVPY792fmdLDf05vaxqf7RXxNZiXHCjWdzTQnJvU9DH+l6a17TziasN/TkOG+v7kIVysNlqdGC9TqLYUfffkNhsiK4v0/c1WYVhoKyKxNHlqbIYOC/M/rxHQw9N/m9SVY4EqXmMp0HY762bS1u/MbHBQeksvBl6I83Tw9x0cM1pqdx7OguPfmjRRwEeEl5p3J0R5bF4d7lnqcWOAk5LLifRZbMhJ5yXgylsags82/7idYc68vQwDStYOhs2Teh7Cng6a5eY6nhILRr0HS8vM0tk5rodGngeiOyqEVxGQpwRnpc+XNo4Rp6ZHSpYY1U93kNUlyZndazGd4RchUNnJO9jd2vR+hFWFWMksAgoYS2hp7YGVZfSAQ6JZbmuZAPyvG/NDFNrivJCote6Mjb3Qg1U5fMKNS/H0uMhNe6vPMdHEJZbiKgIwb/N5xz+Jto4OD1lHxWV/MWsVFfkjfknd+VjRTxfHcVuW8vgi5EaqWApq13GXVRlkaqagtIw/wAoMwUcZneyXl8TdQxMZazSXJZ+prE0anwUFJ/pVreNshlNTfB26O3lkaKeLpRy34+D+sx72rBaT5LJMqMsKVX8qklzd367o9RxGi3r5aXvborFvHN6Ry5tyv6I24OpLu729epUZUsRndzvlrdDKaxL1n5t/NHTcrpXv/jb5ge1JZWlk9F/z6uAiE6y1mvim/IOUq+6/vPpZfyO9sWjVS+T/FbLvuW8UnnabytnKLIOdQnWuvvLPnm/idPCVK17Nxd+ay9dRLmpZJTv0V/NpA1KdmnaSta/4Wl4aL+Sjq79bSNSmrard1Q+PbW+815dOORyKVWkm3neXe0lxtfU24fFRf5nyf3t2ytrl8zLVbJQlx3ejydvCxUa26ndrndPT0szNSs249pUyeTUpRTVzouC6trPST+eYCY4pv8ADPLOzzy73axalVWkk7J/ia/YKW7xuss7XX/RKlTj+FyjxtZuLy4q1l6BWmGIrc4rjnHeT7uXqaO0q8ZQiukLr43Oe8VDRqVnmt1ynC3O1svUbGtT1u7d79SQb6U5e/D4B9o1xi1xzszm1KsVna3fdAQxVuKt1lL/AIIV1lUfD4WJ20lxj4nK7VdFf4+ZUsQl14fWYhXYeLks/u+V/mC9rW1/8nKWMj+rxsiPFw935CFdT7WhxflFgy2nTbtvOPemjjTnTeq82nbzAko8N3xQ5Su17ZD/AOq8yHD/ANfJ/uQsK+HRrPll1GKv0fpb1/YTZ/T1CV/p5nN0aYzb4X71ZeuY1Um/qxkjPr5saqvX0KjbSw9vzW/2Y+NGHGT+By+2fPvskF7RbivG3wFR26eGpLk++Wn7D41ILhH/AFOCsXL3vQp4t8+nB/ItSPRrEQXD1SGU8VDgnlxR5iFZ8ZL018Avamms3az0usy9EeupYyOX4vU20toRfd0s8jw0cdJ6X9RvtL+ndjpOXupbQXNkeIvknHxt80eEhiZJ346JXdkaYY2byvbTiXo5e1jVt7t+uXxDWL3b2l8G491jx8MZJau/TJJryFPGSvx05tXLUj3Ecdzm1krWUfK5lr4m7aSk29Puteb4I8tDFSef3tMs8rj44qos755cbCkdqtCTzaldX1TXqgqKlF3jDX+26/k5UcdVWblLPq0yqu0qlrX882hSO7HGuK5Svd5JZ9+pu2dtqP4ZyX6Xll05W6Hi6uOm0k7PllwMlXFtKySz42s7kq5j6asY7XjLLO2SXyFS2lNPO1ue9/HzPGbP27KK3emX3kra8PE1Pa7emcXpx1L4nr0dTaD1u/X6RlrbQS95PwSyPNVdpTurNW01M89oStd7ts80+HyFI9RLakua+a+swVtb6u/pHk57S004P8t1427yfaafFr5fIlWPW/bFuN/F/Ar7Yvo3xbSTv5Hk1jOUmuTysRYt9HyfQUj1b2u1wb/xVwHtno+WSd/ieXe0pL/v7A/aMv0vlr/ApHqHtSP61zvlZ+YX2i+Dl4o8r9oS5euRftz6eI6I9V7fPn6L9yHk3tiKyusv0yZB1hy8uo94cf45kIc3RamiN+pRAJGLfcE8v+IhABt1dlrawSiuvkiEAjnbixdWtna2T+tCEAOFVLL+LjY1r8346EIA32i2l7he083bzIQIpYm/Pzv8S/an3a6FkKNEcVbnfj95hrHW/E34EIKgva+r9Q/aud8uT8EQhaFVcYub5PUz1KzuvNZuxCEC5VX6+ug2OO0TvdrwsQgVJ43o/NfsVDGPhfuummuuRCADOonpdfL0AVTp8CEAtVOmfh/HIKFVPP5LgUQAnN8PlkvIFzfS3dYhAIqvDPjo+Ifb9L6kIBXthRCAf//Z'); background-position: cover; background-attachment: fixed;">
+<div class="container-fluid">
+  
   <div class="row">
   <!-- Looping through pics   -->
   {% for pics_item in pics %}
     <!-- displaying News articles -->
-    <div class="col-md-4 no-pad ">
-        <h1>{{pics_item.image_name}}</h1>
-        <img src="{{pics_item.post_image.url}}" class="img-responsive" alt="Image" style="width: 500px; height: 250px;">
+    <div class="col-md-3 no-pad " style="margin-top: 17px">
+        <button type="button" class="btn " data-toggle="modal" data-target="#exampleModal{{pics_item.id}}">
+      <h2 class="font"><strong> {{pics_item.image_name}}</strong></h2>
+        <img id="myImg" src="{{pics_item.post_image.url}}" alt="Image" style="width:100%;max-width:300px">
+      </button>
+        <!-- <img src="{{pics_item.post_image.url}}" class="img-responsive" alt="Image" style="width: 500px; height: 250px;"> -->
     </div>
-
-  
-
   {% empty %}
   <div class="row">
-    <h2 class="text-center">There No Pictures</h2>
+    <h2 class="text-center">No Pictures Found</h2>
   </div>
   {% endfor %}
 </div>
 </div>
+</div>
+
+  {% for pics_item in pics %}
+  <!-- Modal -->
+  <div class="modal" id="exampleModal{{pics_item.id}}"  role="dialog" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <img id="myImg" src="{{pics_item.post_image.url}}" alt="Image" style="width:100%;max-width:300px">
+          <h4 class="modal-title">{{pics_item.image_description}}</h4>
+        </div>
+          <div class="modal-body">
+             
+          </div>
+          <div class="modal-footer">
+            <button type="button" name="button" class="btn btn-info" value=" http://127.0.0.1:8000{{pics_item.post_image.url}}" onclick="copylink(this.value)">Copy Image Link</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</div>
+</div>
+<script>
+    function copylink(value) {
+        function handler(event){
+              event.clipboardData.setData('text/plain', value);
+              event.preventDefault();
+              document.removeEventListener('copy', handler, true);
+        }
+        document.addEventListener('copy', handler, true);
+        document.execCommand('copy');
+        }
+</script>
+
+{% endfor %}
 
 {% endblock %}
