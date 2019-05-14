@@ -1,29 +1,30 @@
-# soRANDOMBLOGS
+# Photo_gallery
 
-This project was generated with python version 3.6.
+This project was generated with Python version 3.6.
 
 ### By Niklauspeter
 
 ##  Description
-This is a python web appliction that allows a user to create a blog account, log into it, write and publish blog posts.
+This is a django web appliction that allows a user to view pictures posted by the administrator. users can however not add their own posts.
 
 ## User Stories
-These include the features that the application allows.
+
 The user is able to:
-* sign up for an account and log in .
-* write a blog post and save it
-* See other peoples' blog posts and comment on them
+* enter the url to load the website
+* view a grid of uploaded pics displayed in the root page
+* cick on a particular photo to get its description as well as copy its url and share with friends.
 
 
 ## Prerequisites
 To develop the application , youll need to preinstall a few application. including
-* python 3.6
-* flask
+* Python 3.6
+* Django
 * pip
 * postgress
 
 ## Technologies Used
-* python 3.6 
+* python 3.6
+* Django 
 * postgress
 
 ## Setup Information
@@ -32,15 +33,14 @@ To develop the application , youll need to preinstall a few application. includi
 * access the code through your preffered code editor
 * create your database and link it in the config.py
 * run this on your terminal python3.6 manage.py server
-* Run chmod +x start.sh follwoed by ./start.sh while in the project folder to start the project.
-* Once run, the project can be accessed on your localhost using the address: localhost:5000.
+* Once run, the project can be accessed on your localhost using the address: localhost:8000.
 
 ## BDD
 |Behavior |Input |Output |
 |:------------| :---------|:--------|
-| user signs up | fills sign up form on entry | home page displayed and user can access and add categories|
-|user logs in |user enters credentials and password|home page displayed and user can access and add categories|
-|post blog |click on add blog post |redirected to page where user fills a form that allows them to post some content|
+| user loads url on browser | user loads url on web browser | home page displayed and user can view a variety of uploaded pictures|
+|user views description |user clicks on image |image details are displayed as well as the image itself via modal|
+|copy image link |click on copy |images link is copied to clipboard and can be shared to other users|
 
 
 ## LICENSE
